@@ -2,6 +2,7 @@ const { T } = require("../params/timeline");
 
 
 
+
 const findIdByRt = async (req, res) => {
 
     const twId = req.params.id
@@ -17,6 +18,10 @@ const findIdByRt = async (req, res) => {
                 location: res.user.location,
               };
             });
+
+           
+            
+
             return user;
           } else {
             return { msg: "no hay rtws" };
@@ -30,6 +35,7 @@ const findIdByRt = async (req, res) => {
       });
 
     } catch (err) {
+        console.log(err);
       res.status(500).json({
         ok: false,
         msg: "Error :(",
@@ -42,6 +48,9 @@ const findIdByRt = async (req, res) => {
 
 }
 
+
+
 module.exports = {
   findIdByRt,
+  
 };

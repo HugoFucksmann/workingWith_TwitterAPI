@@ -15,7 +15,13 @@ const paramUser_timeline = {
   count: 3,
 };
 
+const paramUser = {
+  screen_name: "omarperotti",
+  count: 3,
+};
+
 module.exports = {
   T,
   paramUser_timeline,
+  paramUser,
 };

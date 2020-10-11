@@ -2,7 +2,7 @@
  * ruta: /retweets
 **/
 const { Router } = require("express");
-const { findIdByRt } = require('../controladores/retweets');
+const { findIdByRt, telegram } = require('../controladores/retweets');
 const router = Router();
 
 router.get("/:id", findIdByRt );
